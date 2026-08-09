@@ -1,5 +1,5 @@
 {
-  "name": "prettier-plugin-markdown-latex",
+  "name": "@austinlongmn/prettier-plugin-markdown-latex",
   "version": "0.1.0",
   "description": "A Prettier plugin for Latex embedded in Markdown",
   "main": "dist/index.js",
@@ -19,7 +19,9 @@
     "dist/*.js",
     "dist/*.js.map",
     "dist/*.mjs",
-    "dist/*.d.ts"
+    "dist/*.d.ts",
+    "README.md",
+    "LICENSE.txt"
   ],
   "scripts": {
     "test": "vitest",
@@ -46,6 +48,10 @@
       "version": "^11.20.0",
       "onFail": "download"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "type": "module",
   "dependencies": {
