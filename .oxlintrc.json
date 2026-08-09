@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "options": {
+    "maxWarnings": 0,
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "prefer-const": "warn"
+  },
+  "ignorePatterns": ["dist", "build", "node_modules", "coverage"]
+}

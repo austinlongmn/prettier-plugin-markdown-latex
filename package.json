@@ -1,0 +1,64 @@
+{
+  "name": "prettier-plugin-markdown-latex",
+  "version": "0.1.0",
+  "description": "A Prettier plugin for Latex embedded in Markdown",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*js": "./dist/*js",
+    "./*mjs": "./dist/*mjs",
+    "./*": {
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.js.map",
+    "dist/*.mjs",
+    "dist/*.d.ts"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "lint": "oxlint --fix",
+    "format": "prettier --write .",
+    "watch": "tsc --watch",
+    "build": "tsc"
+  },
+  "keywords": [
+    "latex",
+    "katex",
+    "mathjax",
+    "markdown",
+    "prettier"
+  ],
+  "author": {
+    "name": "Austin Long",
+    "email": "austin@austinlong.dev"
+  },
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.20.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@unified-latex/unified-latex-prettier": "^1.8.4",
+    "prettier": "^3.0.3",
+    "unist-util-visit": "^5.1.0"
+  },
+  "devDependencies": {
+    "@j178/prek": "^0.4.12",
+    "@types/unist": "^3.0.3",
+    "oxlint": "^1.77.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
